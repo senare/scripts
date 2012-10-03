@@ -29,19 +29,25 @@ function launch_cs_main(){
 }
 
 function launch_main(){
-  bash /mnt/public/home/xdotool/launch_main.sh &
+  bash /mnt/public/home/xdotool/launch.sh anarchy &
 }
 
 function launch_1-5(){
-  bash /mnt/public/home/xdotool/launch_1-5.sh &
+  bash /mnt/public/home/xdotool/launch.sh anarchy-1 &
+  bash /mnt/public/home/xdotool/launch.sh anarchy-2 &
+  bash /mnt/public/home/xdotool/launch.sh anarchy-3 &
+  bash /mnt/public/home/xdotool/launch.sh anarchy-4 &
+  bash /mnt/public/home/xdotool/launch.sh anarchy-5 &
 }
 
 function launch_5-7(){
-  bash /mnt/public/home/xdotool/launch_5-7.sh &
+  bash /mnt/public/home/xdotool/launch.sh anarchy-6 &
+  bash /mnt/public/home/xdotool/launch.sh anarchy-7 &
 }
 
 function launch_8-9(){
-  bash /mnt/public/home/xdotool/launch_8-9.sh &
+  bash /mnt/public/home/xdotool/launch.sh anarchy-8 &
+  bash /mnt/public/home/xdotool/launch.sh anarchy-9 &
 }
 
 function start_workboy(){
@@ -52,7 +58,6 @@ function stop_workboy(){
   PID=$(ps -ef | grep '/mnt/public/home/xdotool/workboy' | grep -v grep | awk '{print $2}')
   $(kill $PID)
 }
-
 
 function start_nuke(){
   bash /mnt/public/home/xdotool/nuke &
@@ -68,12 +73,11 @@ function stop_nuke(){
 function start_aggro(){
   bash /mnt/public/home/xdotool/aggro &
 }
+
 function stop_aggro(){
   PID=$(ps -ef | grep '/mnt/public/home/xdotool/aggro' | grep -v grep | awk '{print $2}')
   $(kill $PID)
 }
-
-
 
 #
 # set infinite loop
