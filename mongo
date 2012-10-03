@@ -1,0 +1,10 @@
+#!/bin/bash
+#./mnt/public/home/73_mans/mans/Desktop/AO_Online/xdotool/TOONS.sh
+WIN_AGGROBOY=0x4600006
+
+sleep 1
+
+for((i=0;$i<=99999999999999;i=$(($i+1))));do
+	xdotool key --clearmodifiers --window $WIN_AGGROBOY alt+1 1 1 1 1 1 1 1 1  
+	sleep 1
+done

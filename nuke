@@ -1,0 +1,10 @@
+#!/bin/bash
+#./mnt/public/home/73_mans/mans/Desktop/AO_Online/xdotool/TOONS.sh
+WIN_WRNUKE=0x3c00006
+
+sleep 1
+
+for((i=0;$i<=9999999999999;i=$(($i+1))));do
+        xdotool key --clearmodifiers --window $WIN_WRNUKE alt+2 1 1 1 1 1 1 1 1 2
+	sleep 1
+done

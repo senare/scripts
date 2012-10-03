@@ -1,0 +1,39 @@
+#!/bin/bash
+win=0x2600006
+sleep 1
+
+xdotool key --clearmodifiers --window $win alt+4 9 9 9 9 9 9 
+
+for((i=0;$i<=10;i=$(($i+1))));do
+	xdotool key --clearmodifiers --window $win alt+1 0 9 8 7 6 5 4 3
+	xdotool key --clearmodifiers --window $win alt+2 1 2 3 4 5 6 7 8 9 0
+	sleep 1
+done
+
+xdotool key --clearmodifiers --window $win alt+4 9 9 9 9 9 9 
+
+for((i=0;$i<=10;i=$(($i+1))));do
+	xdotool key --clearmodifiers --window $win alt+1 0 9 8 7 6 5 4 3
+	xdotool key --clearmodifiers --window $win alt+2 1 2 3 4 5 6 7 8 9 0
+	sleep 1
+done
+
+for((i=0;$i<=10000;i=$(($i+1))));do
+	for((i=0;$i<=60;i=$(($i+1))));do
+		xdotool key --clearmodifiers --window $win alt+4 8
+		for((i=0;$i<=10;i=$(($i+1))));do
+			xdotool key --clearmodifiers --window $win alt+1 0 9 8 7 6 5 4 3
+			xdotool key --clearmodifiers --window $win alt+2 1 2 3 4 5 6 7 8 9 0
+			sleep 1
+		done
+	done
+
+	for((i=0;$i<=5;i=$(($i+1))));do
+	xdotool key --clearmodifiers --window $win alt+4 9 9 9 9 9 9
+		for((i=0;$i<=10;i=$(($i+1))));do
+			xdotool key --clearmodifiers --window $win alt+1 0 9 8 7 6 5 4 3
+			xdotool key --clearmodifiers --window $win alt+2 1 2 3 4 5 6 7 8 9 0
+			sleep 1
+		done
+	done
+done
